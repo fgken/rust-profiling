@@ -12,11 +12,16 @@ void print_time(struct timeval start, struct timeval finish)
 int main()
 {
 	struct timeval start, finish;
+	int i;
 
 	puts("--- Start ---");
 
 	gettimeofday(&start, NULL);
-	printf("Hello\n");
+	
+	for (i=0; i<100; i++){
+		printf("Hello\n");
+	}
+	
 	gettimeofday(&finish, NULL);
 
 	print_time(start, finish);
