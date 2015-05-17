@@ -5,8 +5,13 @@ fn main() {
     
     let start = time::precise_time_ns();
 
+    let d = "Hello! My name is hoge.";
+    let s = "hoge";
     for i in 0..100 {
-        println!("Hello");
+        let a = d.split(" ");
+        for b in a {
+            //println!("{}", b);
+        }
     }
 
     let finish = time::precise_time_ns();

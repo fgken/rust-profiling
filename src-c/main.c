@@ -16,10 +16,22 @@ int main()
 
 	puts("--- Start ---");
 
-	gettimeofday(&start, NULL);
+	{
+		char d[] = "Hello! My name is hoge.";
+		char s[] = "hoge";
+		gettimeofday(&start, NULL);
 	
-	for (i=0; i<100; i++){
-		printf("Hello\n");
+		for (i=0; i<100; i++){
+			char a[32];
+			int i;
+			memcpy(a, d, sizeof(d));
+
+			for(i=0; i<sizeof(d); i++){
+				if(a[i] == ' '){
+					a[i] = '\0';
+				}
+			}
+		}
 	}
 	
 	gettimeofday(&finish, NULL);
